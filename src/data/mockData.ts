@@ -519,13 +519,13 @@ export const teamAssistants: Assistant[] = [
   },
   {
     id: 'approval-assistant',
-    name: '审批助手',
+    name: '待办事项',
     subtitle: '审批流程快处理',
     icon: '✅',
     color: '#34C759',
     bgColor: '#E8F8EE',
     prompts: ['查看待审批事项', '批量处理审批流程', '查询审批进度'],
-    welcomeMessage: '你好！我是审批助手，可以帮你快速处理审批流程、查看审批进度和批量审批。请告诉我你需要审批什么？',
+    welcomeMessage: '你好！我是待办事项助手，可以帮你快速处理待办事项、查看进度和批量处理。请告诉我你需要处理什么？',
     responses: [
       {
         keywords: ['审批', '流程', '同意'],
@@ -971,13 +971,13 @@ export const supportAssistants: Assistant[] = [
   },
   {
     id: 'approval-assistant',
-    name: '审批助手',
+    name: '待办事项',
     subtitle: '审批流程快处理',
     icon: '✅',
     color: '#34C759',
     bgColor: '#E8F8EE',
     prompts: ['查看待审批事项', '批量处理审批流程', '查询审批进度'],
-    welcomeMessage: '你好！我是审批助手，可以帮你快速处理审批流程、查看审批进度和批量审批。请告诉我你需要审批什么？',
+    welcomeMessage: '你好！我是待办事项助手，可以帮你快速处理待办事项、查看进度和批量处理。请告诉我你需要处理什么？',
     responses: [
       {
         keywords: ['审批', '流程', '同意'],
