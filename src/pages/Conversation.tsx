@@ -184,15 +184,8 @@ export default function Conversation() {
 
         {/* 打字中指示器 */}
         {isTyping && (
-          <div className="flex gap-2 px-4 mb-4 animate-fadeIn">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-200 to-primary-400 flex items-center justify-center text-[16px] flex-shrink-0 overflow-hidden">
-              {assistant.image ? (
-                <img src={assistant.image} alt={assistant.name} className="w-full h-full object-cover" />
-              ) : (
-                assistant.icon
-              )}
-            </div>
-            <div className="bg-gray-50 rounded-2xl rounded-tl-md px-4 py-3 flex items-center gap-1">
+          <div className="px-4 mb-4 animate-fadeIn">
+            <div className="w-full bg-gray-50 rounded-2xl px-4 py-3 flex items-center gap-1">
               <span className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
               <span className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
               <span className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
