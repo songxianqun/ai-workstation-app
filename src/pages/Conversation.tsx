@@ -143,16 +143,14 @@ export default function Conversation() {
         showBack
         onBack={() => navigate(-1)}
         rightSlot={
-          <div
-            className="w-8 h-8 rounded-full flex items-center justify-center text-[16px] overflow-hidden"
-            style={{ backgroundColor: assistant.bgColor }}
+          <button
+            onClick={() => navigate('/new-chat')}
+            className="w-9 h-9 flex items-center justify-center active:opacity-60"
           >
-            {assistant.image ? (
-              <img src={assistant.image} alt={assistant.name} className="w-full h-full object-cover" />
-            ) : (
-              assistant.icon
-            )}
-          </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5V19M5 12H19" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
         }
       />
 

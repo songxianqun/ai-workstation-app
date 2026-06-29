@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import BusinessTeamWorkbench from './pages/BusinessTeamWorkbench'
 import SupportCenterWorkbench from './pages/SupportCenterWorkbench'
 import Conversation from './pages/Conversation'
+import NewConversation from './pages/NewConversation'
 import TodayTasks from './pages/TodayTasks'
 import TravelAnalysis from './pages/TravelAnalysis'
 import ExceptionAlerts from './pages/ExceptionAlerts'
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/team" element={<BusinessTeamWorkbench />} />
         <Route path="/support" element={<SupportCenterWorkbench />} />
         <Route path="/chat/:assistantId" element={<Conversation />} />
+        <Route path="/new-chat" element={<NewConversation />} />
         <Route path="/team/tasks" element={<TodayTasks />} />
         <Route path="/support/tasks" element={<TodayTasks />} />
         <Route path="/team/travel" element={<TravelAnalysis />} />
