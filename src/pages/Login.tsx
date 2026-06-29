@@ -6,13 +6,12 @@ import type { UserRole } from '../data/types'
 export default function Login() {
   const navigate = useNavigate()
   const login = useAppStore((s) => s.login)
-  const [account, setAccount] = useState('demo')
+  const [account, setAccount] = useState('王辉')
   const [password, setPassword] = useState('••••••')
   const [role, setRole] = useState<UserRole>('team')
 
   const handleLogin = () => {
-    const name = role === 'team' ? '王辉' : '陈均瑞'
-    login(role, name)
+    login(role, account)
     navigate(role === 'team' ? '/team' : '/support')
   }
 
@@ -67,7 +66,7 @@ export default function Login() {
         <p className="text-[13px] text-gray-500 mb-2.5">选择角色</p>
         <div className="grid grid-cols-2 gap-3 mb-7">
           <button
-            onClick={() => setRole('team')}
+            onClick={() => { setRole('team'); setAccount('王辉') }}
             className={`py-3.5 rounded-2xl text-[14px] font-medium transition-all ${
               role === 'team'
                 ? 'bg-primary-50 border-2 border-primary-300 text-primary-500'
@@ -77,7 +76,7 @@ export default function Login() {
             业务团队
           </button>
           <button
-            onClick={() => setRole('support')}
+            onClick={() => { setRole('support'); setAccount('陈均瑞') }}
             className={`py-3.5 rounded-2xl text-[14px] font-medium transition-all ${
               role === 'support'
                 ? 'bg-primary-50 border-2 border-primary-300 text-primary-500'
