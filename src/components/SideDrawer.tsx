@@ -13,9 +13,9 @@ export default function SideDrawer() {
 
   const handleClose = () => setDrawerOpen(false)
 
-  const handleNavigate = (path: string) => {
+  const handleNavigate = (path: string, initialMessage?: string) => {
     setDrawerOpen(false)
-    navigate(path)
+    navigate(path, initialMessage ? { state: { initialMessage } } : undefined)
   }
 
   const handleLogout = () => {
@@ -26,10 +26,10 @@ export default function SideDrawer() {
 
   // 快捷入口（今日任务、差旅分析在前，审批助手、通知助手在后）
   const quickEntries = [
-    { name: '今日任务', icon: '📋', path: '/chat/task-assistant' },
+    { name: '今日任务', icon: '📋', path: '/chat/task-assistant', initialMessage: '查看今日待办任务' },
     { name: '差旅分析', icon: '✈️', path: '/team/travel' },
-    { name: '审批助手', icon: '✅', path: '/chat/approval-assistant' },
-    { name: '通知助手', icon: '🔔', path: '/chat/notification-assistant' },
+    { name: '审批助手', icon: '✅', path: '/chat/approval-assistant', initialMessage: '查看待审批事项' },
+    { name: '通知助手', icon: '🔔', path: '/chat/notification-assistant', initialMessage: '查看今日通知概览' },
   ]
 
   // 助手ID映射
@@ -77,7 +77,7 @@ export default function SideDrawer() {
           {quickEntries.map((entry) => (
             <button
               key={entry.name}
-              onClick={() => handleNavigate(entry.path)}
+              onClick={() => handleNavigate(entry.path, entry.initialMessage)}
               className="flex flex-col items-center gap-1 flex-1 py-2.5 rounded-xl bg-gray-50 active:bg-gray-100 transition-colors"
             >
               <span className="text-[20px]">{entry.icon}</span>
