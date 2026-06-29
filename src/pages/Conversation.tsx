@@ -23,17 +23,10 @@ export default function Conversation() {
   const [isTyping, setIsTyping] = useState(false)
   const [nextStepIndex, setNextStepIndex] = useState<number | null>(null)
 
-  // 初始化欢迎消息
+  // 初始化（不显示欢迎介绍消息）
   useEffect(() => {
     if (assistant) {
-      setMessages([
-        {
-          id: genId(),
-          role: 'ai',
-          content: assistant.welcomeMessage,
-          timestamp: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }),
-        },
-      ])
+      setMessages([])
     }
   }, [assistant])
 
