@@ -11,7 +11,8 @@ export default function Login() {
   const [role, setRole] = useState<UserRole>('team')
 
   const handleLogin = () => {
-    login(role, account || 'demo')
+    const name = role === 'team' ? '王辉' : '陈均瑞'
+    login(role, name)
     navigate(role === 'team' ? '/team' : '/support')
   }
 

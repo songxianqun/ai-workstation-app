@@ -9,7 +9,7 @@ export default function SideDrawer() {
 
   if (!drawerOpen) return null
 
-  const roleLabel = userRole === 'team' ? '业务团队人员' : '业务支持人员'
+  const department = userRole === 'team' ? '资产管理部' : '投资银行部'
 
   const handleClose = () => setDrawerOpen(false)
 
@@ -64,8 +64,8 @@ export default function SideDrawer() {
           <div className="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center text-[28px] mb-3">
             🤖
           </div>
-          <p className="text-[17px] font-semibold text-white">{roleLabel}</p>
-          <p className="text-[13px] text-white/80 mt-1">{username || 'demo'}</p>
+          <p className="text-[17px] font-semibold text-white">{username}</p>
+          <p className="text-[13px] text-white/80 mt-1">{department}</p>
         </div>
 
         {/* 快捷入口 */}
