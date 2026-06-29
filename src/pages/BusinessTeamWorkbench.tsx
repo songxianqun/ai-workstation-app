@@ -30,7 +30,7 @@ export default function BusinessTeamWorkbench() {
         onMenu={() => setDrawerOpen(true)}
         rightSlot={
           <button
-            onClick={() => navigate('/team/alerts')}
+            onClick={() => navigate('/chat/alert-assistant', { state: { initialMessage: '查看异常提醒概览' } })}
             className="w-9 h-9 flex items-center justify-center active:opacity-60 relative"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">

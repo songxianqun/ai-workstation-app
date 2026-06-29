@@ -27,7 +27,7 @@ export default function SideDrawer() {
   // 快捷入口（今日任务、差旅分析在前，待办事项、通知提醒在后）
   const quickEntries = [
     { name: '今日任务', icon: '📋', path: '/chat/task-assistant', initialMessage: '查看今日待办任务' },
-    { name: '差旅分析', icon: '✈️', path: '/team/travel' },
+    { name: '差旅分析', icon: '✈️', path: '/chat/travel-analysis', initialMessage: '查看差旅分析' },
     { name: '待办事项', icon: '✅', path: '/chat/approval-assistant', initialMessage: '查看待审批事项' },
     { name: '通知提醒', icon: '🔔', path: '/chat/notification-assistant', initialMessage: '查看今日通知概览' },
   ]
