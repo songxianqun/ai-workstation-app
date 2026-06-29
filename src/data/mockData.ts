@@ -530,14 +530,6 @@ export const teamAssistants: Assistant[] = [
       {
         keywords: ['审批', '流程', '同意'],
         reply: '正在处理审批请求...\n\n📋 当前待审批事项\n1. 测试科技有限公司开户绿色通道申请 — 待审批\n2. 张三投资者准入认定 — 待审核\n3. 稳盈1号季度报告 — 待确认\n\n所有审批材料已核验完毕，建议批量通过。',
-        output: {
-          fileName: '审批处理结果汇总.xlsx',
-          fileType: 'xlsx',
-          generatedBy: '审批助手',
-          relatedModel: '审批流程引擎',
-          relatedCustomer: '测试科技等',
-          content: '包含3项审批事项的处理结果、审批意见和流程节点记录。',
-        },
       },
     ],
   },
@@ -992,14 +984,6 @@ export const supportAssistants: Assistant[] = [
       {
         keywords: ['审批', '流程', '同意'],
         reply: '正在处理审批请求...\n\n📋 当前待审批事项\n1. 测试科技有限公司开户绿色通道申请 — 待审批\n2. 张三投资者准入认定 — 待审核\n3. 稳盈1号季度报告 — 待确认\n\n所有审批材料已核验完毕，建议批量通过。',
-        output: {
-          fileName: '审批处理结果汇总.xlsx',
-          fileType: 'xlsx',
-          generatedBy: '审批助手',
-          relatedModel: '审批流程引擎',
-          relatedCustomer: '测试科技等',
-          content: '包含3项审批事项的处理结果、审批意见和流程节点记录。',
-        },
       },
     ],
   },
