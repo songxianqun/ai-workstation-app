@@ -28,7 +28,7 @@ export default function MessageBubble({
         <div
           className={`px-3.5 py-2.5 text-[14px] leading-relaxed ${
             isAI
-              ? 'bg-gray-50 text-gray-800 rounded-2xl'
+              ? 'bg-gray-100 text-gray-800 rounded-2xl'
               : 'bg-gradient-to-br from-primary-300 to-primary-400 text-white rounded-2xl whitespace-pre-wrap'
           }`}
         >
