@@ -1140,7 +1140,7 @@ export const supportTaskGroups: TaskGroup[] = [
   },
 ]
 
-// ===== 6条异常提醒 =====
+// ===== 5条异常提醒 =====
 export const exceptionAlerts: ExceptionAlert[] = [
   {
     id: 'a1',
@@ -1181,14 +1181,6 @@ export const exceptionAlerts: ExceptionAlert[] = [
     level: 'low',
     levelLabel: '低危',
     time: '2026-06-25 10:45',
-  },
-  {
-    id: 'a6',
-    title: '合格投资者认证缺失',
-    description: '客户张某账户资产888万元但未完成合格投资者认证，影响私募产品购买。',
-    level: 'low',
-    levelLabel: '低危',
-    time: '2026-06-24 17:30',
   },
 ]
 
