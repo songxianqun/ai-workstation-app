@@ -25,6 +25,7 @@ export default function App() {
         <Route path="/team/tasks" element={<TodayTasks />} />
         <Route path="/support/tasks" element={<TodayTasks />} />
         <Route path="/team/travel" element={<TravelAnalysis />} />
+        <Route path="/team/alerts" element={<ExceptionAlerts />} />
         <Route path="/support/alerts" element={<ExceptionAlerts />} />
         <Route path="/task/:taskId" element={<TaskDetail />} />
         <Route path="/settings" element={<Settings />} />
