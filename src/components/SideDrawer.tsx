@@ -24,6 +24,14 @@ export default function SideDrawer() {
     navigate('/login')
   }
 
+  // 快捷入口
+  const quickEntries = [
+    { name: '审批助手', icon: '✅', path: '/chat/approval-assistant' },
+    { name: '通知助手', icon: '🔔', path: '/chat/notification-assistant' },
+    { name: '今日任务', icon: '📋', path: '/chat/task-assistant' },
+    { name: '差旅分析', icon: '✈️', path: '/team/travel' },
+  ]
+
   // 助手ID映射
   const assistantIdMap: Record<string, string> = {
     '客户分析': 'customer-analysis',
@@ -58,6 +66,23 @@ export default function SideDrawer() {
           </div>
           <p className="text-[17px] font-semibold text-white">{roleLabel}</p>
           <p className="text-[13px] text-white/80 mt-1">{username || 'demo'}</p>
+        </div>
+
+        {/* 快捷入口 */}
+        <div className="px-5 pt-3 pb-1">
+          <p className="text-[12px] font-medium text-gray-400">快捷入口</p>
+        </div>
+        <div className="px-5 pb-2 flex gap-2">
+          {quickEntries.map((entry) => (
+            <button
+              key={entry.name}
+              onClick={() => handleNavigate(entry.path)}
+              className="flex flex-col items-center gap-1 flex-1 py-2.5 rounded-xl bg-gray-50 active:bg-gray-100 transition-colors"
+            >
+              <span className="text-[20px]">{entry.icon}</span>
+              <span className="text-[11px] text-gray-600">{entry.name}</span>
+            </button>
+          ))}
         </div>
 
         {/* 历史会话列表 */}

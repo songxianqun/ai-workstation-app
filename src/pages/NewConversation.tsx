@@ -13,6 +13,11 @@ export default function NewConversation() {
   const setDrawerOpen = useAppStore((s) => s.setDrawerOpen)
   const [selectedAssistant, setSelectedAssistant] = useState<Assistant | null>(null)
 
+  // 快捷栏只展示核心业务助手，排除审批/通知等
+  const quickBarAssistants = teamAssistants.filter(
+    (a) => !['approval-assistant', 'notification-assistant'].includes(a.id)
+  )
+
   return (
     <div className="h-full flex flex-col bg-white relative">
       <SideDrawer />
@@ -31,15 +36,11 @@ export default function NewConversation() {
 
       {/* 助手快捷栏（输入框上方按钮） */}
       <AssistantQuickBar
-        assistants={teamAssistants}
+        assistants={quickBarAssistants}
         onSelect={(id) => {
-          const assistant = teamAssistants.find((a) => a.id === id)
+          const assistant = quickBarAssistants.find((a) => a.id === id)
           if (assistant) setSelectedAssistant(assistant)
         }}
-        extraItems={[
-          { id: 'today-tasks', name: '今日任务', subtitle: '6项待办', icon: '📋', bgColor: '#E8EFFF', onClick: () => navigate('/chat/task-assistant', { state: { initialMessage: '我的今日任务是什么？' } }) },
-          { id: 'travel', name: '差旅分析', subtitle: '本月5次', icon: '✈️', bgColor: '#E8F8EE', onClick: () => navigate('/team/travel') },
-        ]}
       />
 
       {/* 底部输入栏 */}
