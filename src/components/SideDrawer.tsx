@@ -24,12 +24,12 @@ export default function SideDrawer() {
     navigate('/login')
   }
 
-  // 快捷入口（今日任务、差旅分析在前，待办事项、通知助手在后）
+  // 快捷入口（今日任务、差旅分析在前，待办事项、通知提醒在后）
   const quickEntries = [
     { name: '今日任务', icon: '📋', path: '/chat/task-assistant', initialMessage: '查看今日待办任务' },
     { name: '差旅分析', icon: '✈️', path: '/team/travel' },
     { name: '待办事项', icon: '✅', path: '/chat/approval-assistant', initialMessage: '查看待审批事项' },
-    { name: '通知助手', icon: '🔔', path: '/chat/notification-assistant', initialMessage: '查看今日通知概览' },
+    { name: '通知提醒', icon: '🔔', path: '/chat/notification-assistant', initialMessage: '查看今日通知概览' },
   ]
 
   // 助手ID映射

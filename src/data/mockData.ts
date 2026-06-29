@@ -535,13 +535,13 @@ export const teamAssistants: Assistant[] = [
   },
   {
     id: 'notification-assistant',
-    name: '通知助手',
+    name: '通知提醒',
     subtitle: '消息通知不遗漏',
     icon: '🔔',
     color: '#FF9500',
     bgColor: '#FFF5E6',
     prompts: ['查看今日通知概览', '设置消息提醒规则', '查看历史通知记录'],
-    welcomeMessage: '你好！我是通知助手，可以帮你管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
+    welcomeMessage: '你好！我是通知提醒助手，可以帮你管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
     responses: [
       {
         keywords: ['通知', '公告', '消息', '提醒'],
@@ -987,13 +987,13 @@ export const supportAssistants: Assistant[] = [
   },
   {
     id: 'notification-assistant',
-    name: '通知助手',
+    name: '通知提醒',
     subtitle: '消息通知不遗漏',
     icon: '🔔',
     color: '#FF9500',
     bgColor: '#FFF5E6',
     prompts: ['查看今日通知概览', '设置消息提醒规则', '查看历史通知记录'],
-    welcomeMessage: '你好！我是通知助手，可以帮你管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
+    welcomeMessage: '你好！我是通知提醒助手，可以帮你管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
     responses: [
       {
         keywords: ['通知', '公告', '消息', '提醒'],
