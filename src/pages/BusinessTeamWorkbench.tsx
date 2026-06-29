@@ -12,15 +12,12 @@ import type { Assistant } from '../data/types'
 export default function BusinessTeamWorkbench() {
   const navigate = useNavigate()
   const setDrawerOpen = useAppStore((s) => s.setDrawerOpen)
-  const { username, userRole } = useAppStore()
   const [selectedAssistant, setSelectedAssistant] = useState<Assistant | null>(null)
 
   // 快捷栏只展示核心业务助手，排除审批/通知等
   const quickBarAssistants = teamAssistants.filter(
     (a) => !['approval-assistant', 'notification-assistant'].includes(a.id)
   )
-
-  const department = userRole === 'team' ? '业务团队' : '业务支持中心'
 
   return (
     <div className="h-full flex flex-col bg-white relative">
@@ -38,13 +35,12 @@ export default function BusinessTeamWorkbench() {
 
       {/* 主内容区（可滚动） */}
       <div className="flex-1 overflow-y-auto scrollbar-hide flex flex-col items-center justify-center">
-        {/* 员工信息区 */}
+        {/* 品牌区 */}
         <div className="flex flex-col items-center w-full">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-200 to-primary-400 flex items-center justify-center text-[24px] font-bold text-white mb-3 shadow-md shadow-primary-200/50">
-            {(username || '员')[0]}
+          <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-primary-100 to-primary-300 flex items-center justify-center text-[40px] mb-3 shadow-md shadow-primary-200/50">
+            🤖
           </div>
-          <h2 className="text-[20px] font-bold text-gray-900">{username || '员工'}</h2>
-          <p className="text-[13px] text-gray-400 mt-1">{department}</p>
+          <h2 className="text-[20px] font-bold text-gray-900">员工工作台</h2>
 
           {/* 提示词列表 */}
           <div className="mt-6 w-full px-5">
