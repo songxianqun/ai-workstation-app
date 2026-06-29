@@ -24,12 +24,12 @@ export default function SideDrawer() {
     navigate('/login')
   }
 
-  // 快捷入口
+  // 快捷入口（今日任务、差旅分析在前，审批助手、通知助手在后）
   const quickEntries = [
-    { name: '审批助手', icon: '✅', path: '/chat/approval-assistant' },
-    { name: '通知助手', icon: '🔔', path: '/chat/notification-assistant' },
     { name: '今日任务', icon: '📋', path: '/chat/task-assistant' },
     { name: '差旅分析', icon: '✈️', path: '/team/travel' },
+    { name: '审批助手', icon: '✅', path: '/chat/approval-assistant' },
+    { name: '通知助手', icon: '🔔', path: '/chat/notification-assistant' },
   ]
 
   // 助手ID映射
@@ -60,19 +60,20 @@ export default function SideDrawer() {
       {/* 抽屉 */}
       <div className="absolute top-0 left-0 bottom-0 w-[280px] bg-white z-50 animate-slideInLeft flex flex-col">
         {/* 用户信息区 */}
-        <div className="pt-12 pb-6 px-5 bg-gradient-to-br from-primary-200 to-primary-400">
-          <div className="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center text-[28px] mb-3">
-            🤖
+        <div className="pt-10 pb-3 px-5 bg-gradient-to-br from-primary-200 to-primary-400">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center text-[22px] flex-shrink-0">
+              🤖
+            </div>
+            <div>
+              <p className="text-[16px] font-semibold text-white">{username}</p>
+              <p className="text-[12px] text-white/80">{department}</p>
+            </div>
           </div>
-          <p className="text-[17px] font-semibold text-white">{username}</p>
-          <p className="text-[13px] text-white/80 mt-1">{department}</p>
         </div>
 
-        {/* 快捷入口 */}
-        <div className="px-5 pt-3 pb-1">
-          <p className="text-[12px] font-medium text-gray-400">快捷入口</p>
-        </div>
-        <div className="px-5 pb-2 flex gap-2">
+        {/* 快捷入口（无标题） */}
+        <div className="px-5 pt-3 pb-2 flex gap-2">
           {quickEntries.map((entry) => (
             <button
               key={entry.name}
@@ -85,9 +86,12 @@ export default function SideDrawer() {
           ))}
         </div>
 
+        {/* 分隔线 */}
+        <div className="border-t border-gray-100 mx-5"></div>
+
         {/* 历史会话列表 */}
         <div className="flex-1 overflow-y-auto scrollbar-hide">
-          <div className="px-5 pt-3 pb-1">
+          <div className="px-5 pt-2 pb-1">
             <p className="text-[12px] font-medium text-gray-400">历史会话</p>
           </div>
           {historySessions.map((session) => (
