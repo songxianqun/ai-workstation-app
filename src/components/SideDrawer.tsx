@@ -81,12 +81,12 @@ export default function SideDrawer() {
         {/* 新建会话按钮 */}
         <button
           onClick={() => handleNavigate('/new-chat')}
-          className="mx-5 mt-3 flex items-center gap-2 px-4 py-3 rounded-xl bg-primary-50 border border-primary-200 active:bg-primary-100 transition-colors"
+          className="mx-5 mt-3 flex items-center gap-2 px-4 py-3 rounded-xl bg-gray-100 active:bg-gray-200 transition-colors"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M12 20H9C5.13401 20 2 16.866 2 13C2 9.13401 5.13401 6 9 6H12M16 4L20 8L16 12M20 8H9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
           </svg>
-          <span className="text-[14px] font-medium text-primary-500">新建会话</span>
+          <span className="text-[14px] font-medium text-gray-700">新建会话</span>
         </button>
 
         {/* 快捷入口（无标题） */}
