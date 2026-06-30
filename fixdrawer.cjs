@@ -1,0 +1,9 @@
+﻿const fs = require('fs');
+let lines = fs.readFileSync('src/components/SideDrawer.tsx', 'utf8').split('\n');
+const defLines = ['', '  // quick entries', '  const quickEntries = [', '    { name: '\u5BA1\u6279\u52A9\u624B', icon: '\u2705', path: '/chat/approval-assistant' },', '    { name: '\u901A\u77E5\u52A9\u624B', icon: '\uD83D\uDD14', path: '/chat/notification-assistant' },', '    { name: '\u4ECA\u65E5\u4EFB\u52A1', icon: '\uD83D\uDCCB', path: '/chat/task-assistant' },', '    { name: '\u5DEE\u65C5\u5206\u6790', icon: '\u2708\uFE0F', path: '/team/travel' },', '  ]'];
+lines = [...lines.slice(0, 43), ...defLines, ...lines.slice(43)];
+let histIdx = lines.findIndex(l => l.includes('\u5386\u53F2\u4F1A\u8BDD'));
+const uiLines = ['', '        {/* quick entries */}', '        <div className="px-5 pt-3 pb-1">', '          <p className="text-[12px] font-medium text-gray-400">\u5FEB\u6377\u5165\u53E3</p>', '        </div>', '        <div className="px-5 pb-2 flex gap-2">', '          {quickEntries.map((entry) => (', '            <button', '              key={entry.name}', '              onClick={() => handleNavigate(entry.path)}', '              className="flex flex-col items-center gap-1 flex-1 py-2.5 rounded-xl bg-gray-50 active:bg-gray-100 transition-colors"', '            >', '              <span className="text-[20px]">{entry.icon}</span>', '              <span className="text-[11px] text-gray-600">{entry.name}</span>', '            </button>', '          ))}', '        </div>'];
+lines = [...lines.slice(0, histIdx - 1), ...uiLines, ...lines.slice(histIdx - 1)];
+fs.writeFileSync('src/components/SideDrawer.tsx', lines.join('\n'), 'utf8');
+console.log('Done! Lines:', lines.length);
