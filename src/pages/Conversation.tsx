@@ -137,7 +137,7 @@ export default function Conversation() {
         onBack={() => navigate(-1)}
         rightSlot={
           <button
-            onClick={() => navigate('/new-chat')}
+            onClick={() => navigate('/new-chat', { replace: true })}
             className="w-9 h-9 flex items-center justify-center active:opacity-60"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
