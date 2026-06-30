@@ -81,7 +81,7 @@ export default function SideDrawer() {
         {/* 新建会话按钮 */}
         <button
           onClick={() => handleNavigate('/new-chat')}
-          className="mx-5 mt-3 flex items-center gap-2 px-4 py-3 rounded-xl bg-gray-100 active:bg-gray-200 transition-colors"
+          className="mx-5 mt-3 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gray-100 active:bg-gray-200 transition-colors"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
             <path d="M12 20h9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
