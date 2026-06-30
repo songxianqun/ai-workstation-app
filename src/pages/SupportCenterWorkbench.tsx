@@ -88,7 +88,7 @@ export default function SupportCenterWorkbench() {
 
       {/* 助手快捷栏（输入框上方） */}
       <AssistantQuickBar
-        assistants={supportAssistants.filter((a) => a.id !== 'approval-assistant')}
+        assistants={supportAssistants.filter((a) => a.id !== 'approval-assistant' && a.id !== 'notification-assistant')}
         onSelect={(id) => {
           const assistant = supportAssistants.find((a) => a.id === id)
           if (assistant) setSelectedAssistant(assistant)
