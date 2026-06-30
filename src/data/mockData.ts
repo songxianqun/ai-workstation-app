@@ -990,14 +990,6 @@ export const supportAssistants: Assistant[] = [
       {
         keywords: ['异常', '提醒', '告警'],
         reply: '⚠️ 异常提醒概览\n\n1. 【高危】单笔银证转入≥100万且3日零交易 — 客户李四\n2. 【高危】客户周八风险测评C1但持有R4产品\n3. 【中危】基金定投扣款异常8户需跟进\n4. 【中危】私募基金双录视频缺失3户\n5. 【低危】机构客户大额资金异动\n\n建议立即处理第1、2项高危异常。',
-        output: {
-          fileName: '异常提醒汇总报告.docx',
-          fileType: 'docx',
-          generatedBy: '异常提醒',
-          relatedModel: 'GPT-4',
-          relatedCustomer: '李四、周八等',
-          content: '包含5项异常的详细描述、风险等级、涉及客户和处理建议。',
-        },
       },
     ],
   },
