@@ -53,7 +53,7 @@ export default function NewConversation() {
         prompts={selectedAssistant?.prompts}
         onSend={(text) => {
           const assistantId = selectedAssistant?.id || 'customer-analysis'
-          navigate(`/chat/${assistantId}`, { state: { initialMessage: text } })
+          navigate(`/chat/${assistantId}`, { state: { initialMessage: text }, replace: true })
         }}
       />
     </div>
