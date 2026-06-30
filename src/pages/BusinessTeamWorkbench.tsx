@@ -16,7 +16,7 @@ export default function BusinessTeamWorkbench() {
 
   // 快捷栏只展示核心业务助手，排除审批/通知等
   const quickBarAssistants = teamAssistants.filter(
-    (a) => !['approval-assistant', 'notification-assistant'].includes(a.id)
+    (a) => !['approval-assistant', 'notification-assistant', 'travel-analysis'].includes(a.id)
   )
 
   return (
