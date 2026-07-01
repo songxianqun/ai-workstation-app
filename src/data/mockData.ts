@@ -395,7 +395,7 @@ export const teamAssistants: Assistant[] = [
     responses: [
       {
         keywords: ['业绩', '数据', '分析'],
-        reply: '正在生成业务分析报告...\n\n📈 本月业务概况\n• 新增客户：128户（环比+15%）\n• AUM净增：2.3亿元\n• 产品销量：基金1.2亿、保险0.8亿、理财0.3亿\n• 客户活跃度：日均交易478笔\n\n业绩亮点：权益类基金销量同比增长32%\n需关注：固收类产品销量下滑12%',
+        reply: '正在生成业务分析报告...\n\n📈 本月业务概况\n• 新增客户：86户（环比+8%）\n• AUM净增：1.5亿元\n• 产品销量：基金0.8亿、保险0.5亿、理财0.2亿\n• 客户活跃度：日均交易312笔\n\n业绩亮点：权益类基金销量同比增长18%\n需关注：固收类产品销量下滑8%',
         output: {
           fileName: '业务分析月报.docx',
           fileType: 'docx',
@@ -1211,7 +1211,7 @@ export const exceptionAlerts: ExceptionAlert[] = [
 // ===== 历史会话 =====
 export const historySessions: HistorySession[] = [
   { id: 'h1', assistantName: '客户分析', assistantIcon: '🧠', lastMessage: '客户张三资产规模500万元，可适当配置平衡型产品...', time: '今天 14:30', messageCount: 8 },
-  { id: 'h2', assistantName: '业务分析', assistantIcon: '🐎', lastMessage: '本月新增客户128户，环比增长15%...', time: '今天 11:20', messageCount: 5 },
+  { id: 'h2', assistantName: '业务分析', assistantIcon: '🐎', lastMessage: '本月新增客户86户，环比增长8%...', time: '今天 11:20', messageCount: 5 },
   { id: 'h3', assistantName: '方案生成', assistantIcon: '📄', lastMessage: '已生成稳健型客户理财方案，预期年化6%-8%...', time: '昨天 16:45', messageCount: 12 },
   { id: 'h4', assistantName: '今日任务', assistantIcon: '📋', lastMessage: '当前有4项待办任务，建议优先处理开户审批...', time: '昨天 09:15', messageCount: 6 },
   { id: 'h5', assistantName: '异常提醒', assistantIcon: '⚠️', lastMessage: '检测到2项高危异常，需立即处理...', time: '06-24 17:30', messageCount: 4 },
