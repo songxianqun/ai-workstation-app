@@ -25,9 +25,9 @@ export const teamAssistants: Assistant[] = [
     color: '#2EC4B6',
     bgColor: '#E0F7F4',
     prompts: [
-      '我手头有个制造业上市公司客户，营收20亿，想融资扩产',
+      '现有制造业上市公司客户，营收20亿元，拟融资扩产',
       { text: '输入客户名称等信息，分析客户资产情况', fillPlaceholder: '请输入客户名称或说出客户名称' },
-      '我有个客户，挺有钱的，想找项目投资',
+      '客户有资金，寻求项目投资机会',
     ],
     welcomeMessage: `我是您的客户分析助手，当前已加载以下能力模型：
 
@@ -45,7 +45,7 @@ export const teamAssistants: Assistant[] = [
 请直接描述您的客户情况，我开始协助您。
 
 💡 您可以直接描述客户情况，例如：
->>> 我手头有个制造业上市公司客户，营收20亿，想融资扩产`,
+>>> 现有制造业上市公司客户，营收20亿元，拟融资扩产`,
     responses: [
       {
         keywords: ['融资', '扩产', '制造业', '上市公司'],
@@ -391,7 +391,7 @@ export const teamAssistants: Assistant[] = [
 请直接描述您的客户情况或需求，我开始协助您。
 
 💡 您可以直接描述客户情况，例如：
->>> 我手头有个制造业上市公司客户，营收20亿，想融资扩产`,
+>>> 现有制造业上市公司客户，营收20亿元，拟融资扩产`,
     responses: [
       {
         keywords: ['业绩', '数据', '分析'],
@@ -525,7 +525,7 @@ export const teamAssistants: Assistant[] = [
     color: '#34C759',
     bgColor: '#E8F8EE',
     prompts: ['查看待审批事项', '批量处理审批流程', '查询审批进度'],
-    welcomeMessage: '你好！我是待办事项助手，可以帮你快速处理待办事项、查看进度和批量处理。请告诉我你需要处理什么？',
+    welcomeMessage: '你好！我是待办事项助手，可以协助您快速处理待办事项、查看进度和批量处理。请告诉我你需要处理什么？',
     responses: [
       {
         keywords: ['审批', '流程', '同意'],
@@ -541,7 +541,7 @@ export const teamAssistants: Assistant[] = [
     color: '#FF9500',
     bgColor: '#FFF5E6',
     prompts: ['查看今日通知概览', '设置消息提醒规则', '查看历史通知记录'],
-    welcomeMessage: '你好！我是通知提醒助手，可以帮你管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
+    welcomeMessage: '你好！我是通知提醒助手，可以协助您管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
     responses: [
       {
         keywords: ['通知', '公告', '消息', '提醒'],
@@ -565,7 +565,7 @@ export const teamAssistants: Assistant[] = [
     color: '#007AFF',
     bgColor: '#E8F2FF',
     prompts: ['查看差旅分析', '差旅费用趋势', '待报销明细'],
-    welcomeMessage: '你好！我是差旅分析助手，可以帮你分析差旅数据、查看费用趋势和报销进度。需要查看什么？',
+    welcomeMessage: '你好！我是差旅分析助手，可以协助您分析差旅数据、查看费用趋势和报销进度。需要查看什么？',
     responses: [
       {
         keywords: ['差旅', '分析', '查看', '出差', '费用', '报销'],
@@ -877,7 +877,7 @@ export const supportAssistants: Assistant[] = [
     bgColor: '#E8EFFF',
     image: '/images/daily-task-assistant-avatar.png',
     prompts: ['查看今日待办任务', '查看任务优先级排序', '分配任务给团队成员'],
-    welcomeMessage: '你好！我是今日任务助手，当前你有4项待办任务需要协同处理。我可以帮你查看任务详情、分配任务和追踪进度。需要查看哪些任务？',
+    welcomeMessage: '你好！我是今日任务助手，当前你有4项待办任务需要协同处理。我可以协助您查看任务详情、分配任务和追踪进度。需要查看哪些任务？',
     responses: [
       {
         keywords: ['任务', '待办', '查看'],
@@ -985,7 +985,7 @@ export const supportAssistants: Assistant[] = [
     bgColor: '#FEF3E2',
     image: '/images/jiaocha-assistant-avatar.png',
     prompts: ['查看异常提醒概览', '分析高危异常原因', '生成异常处理建议'],
-    welcomeMessage: '你好！我是异常提醒助手，当前有5项异常需关注。我可以帮你查看异常详情、分析原因和生成处理建议。需要查看哪些异常？',
+    welcomeMessage: '你好！我是异常提醒助手，当前有5项异常需关注。我可以协助您查看异常详情、分析原因和生成处理建议。需要查看哪些异常？',
     responses: [
       {
         keywords: ['异常', '提醒', '告警'],
@@ -1001,7 +1001,7 @@ export const supportAssistants: Assistant[] = [
     color: '#34C759',
     bgColor: '#E8F8EE',
     prompts: ['查看待审批事项', '批量处理审批流程', '查询审批进度'],
-    welcomeMessage: '你好！我是待办事项助手，可以帮你快速处理待办事项、查看进度和批量处理。请告诉我你需要处理什么？',
+    welcomeMessage: '你好！我是待办事项助手，可以协助您快速处理待办事项、查看进度和批量处理。请告诉我你需要处理什么？',
     responses: [
       {
         keywords: ['审批', '流程', '同意'],
@@ -1017,7 +1017,7 @@ export const supportAssistants: Assistant[] = [
     color: '#FF9500',
     bgColor: '#FFF5E6',
     prompts: ['查看今日通知概览', '设置消息提醒规则', '查看历史通知记录'],
-    welcomeMessage: '你好！我是通知提醒助手，可以帮你管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
+    welcomeMessage: '你好！我是通知提醒助手，可以协助您管理消息通知、设置提醒规则和查看历史通知。请问需要什么帮助？',
     responses: [
       {
         keywords: ['通知', '公告', '消息', '提醒'],
@@ -1236,4 +1236,4 @@ export const travelStats = {
 }
 
 // ===== 通用AI回复（未匹配关键词时的默认回复） =====
-export const defaultAIReply = '我已收到你的消息。作为你的AI助手，我可以帮你分析数据、生成方案、验证信息等。请告诉我更具体的需求，我会为你提供专业的帮助。'
+export const defaultAIReply = '我已收到你的消息。作为你的AI助手，我可以协助您分析数据、生成方案、验证信息等。请告诉我更具体的需求，我会为你提供专业的帮助。'
