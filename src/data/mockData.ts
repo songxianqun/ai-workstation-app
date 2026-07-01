@@ -26,7 +26,7 @@ export const teamAssistants: Assistant[] = [
     bgColor: '#E0F7F4',
     prompts: [
       '我手头有个制造业上市公司客户，营收20亿，想融资扩产',
-      { text: '帮我分析一下客户张三的资产情况', fillPlaceholder: '请输入客户名称或说出客户名称' },
+      { text: '输入客户名称等信息，分析客户资产情况', fillPlaceholder: '请输入客户名称或说出客户名称' },
       '我有个客户，挺有钱的，想找项目投资',
     ],
     welcomeMessage: `我是您的客户分析助手，当前已加载以下能力模型：
